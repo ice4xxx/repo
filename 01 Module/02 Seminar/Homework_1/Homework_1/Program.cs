@@ -15,6 +15,10 @@ namespace Lesson2
 {
     class Program
     {
+
+
+
+        #region privateVariables
         //количетсво улиц
         private static int N = 0;
 
@@ -27,7 +31,8 @@ namespace Lesson2
         {
             {true, CreateArrayOfStreets},
             {false, CreateRandomArrayOfStreets}
-        };
+        }; 
+        #endregion
 
         static void Main(string[] args)
         {
@@ -35,12 +40,12 @@ namespace Lesson2
             {
                 Console.Clear();
 
-                if (!IntializeDataFile())
+                if (!InitDataFile())
                 {
                     return;
                 }
 
-                InitializeN();
+                InitN();
 
                 List<Street> streetsArray = new List<Street>();
 
@@ -63,6 +68,8 @@ namespace Lesson2
         }
 
 
+
+        #region helpers
         /// <summary>
         /// Сериализует массив
         /// </summary>
@@ -81,7 +88,7 @@ namespace Lesson2
         /// <summary>
         /// Ввод числа N
         /// </summary>
-        private static void InitializeN()
+        private static void InitN()
         {
             bool IsInputCorrect = false;
             do
@@ -105,7 +112,7 @@ namespace Lesson2
         /// open data.txt
         /// </summary>
         /// <returns></returns>
-        private static bool IntializeDataFile()
+        private static bool InitDataFile()
         {
             bool intialized = true;
             try
@@ -198,7 +205,7 @@ namespace Lesson2
         private static bool CreateArrayOfStreets(out List<Street> streetsArray)
         {
             streetsArray = new List<Street>();
-            if (!IntializeDataFile())
+            if (!InitDataFile())
             {
                 return false;
             }
@@ -275,6 +282,7 @@ namespace Lesson2
             }
 
             return true;
-        }
+        } 
+        #endregion
     }
 }

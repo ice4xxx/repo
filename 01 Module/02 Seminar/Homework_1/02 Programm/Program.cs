@@ -29,7 +29,7 @@ namespace Program2
         }
 
         /// <summary>
-        /// Сериализует out.ser
+        /// Десериализует out.ser
         /// </summary>
         /// <returns></returns>
         private static List<Street> GetXmlStreetsDeserialize()
