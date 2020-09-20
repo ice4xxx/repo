@@ -70,6 +70,7 @@ namespace Lesson2
 
 
         #region helpers
+
         /// <summary>
         /// Сериализует массив
         /// </summary>
@@ -283,6 +284,7 @@ namespace Lesson2
 
             return true;
         } 
+
         #endregion
     }
 }

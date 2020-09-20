@@ -15,7 +15,7 @@ namespace Program2
         static void Main(string[] args)
         {
             IEnumerable<Street> streetsArray =
-                GetXmlStreetsDeserialize().Where(element => element.houses.Count % 2 == 1 && !element);
+                GetXmlStreetsDeserialize().Where(element => ~element % 2 == 1 && !element);
 
             foreach (var street in streetsArray)
             {

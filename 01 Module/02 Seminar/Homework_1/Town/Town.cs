@@ -20,7 +20,6 @@ namespace Town
         public string name
         {
             get { return mName; }
-
             set { mName = value; }
         }
 
